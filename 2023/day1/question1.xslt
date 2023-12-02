@@ -15,6 +15,7 @@
       <sum>
         {sum( (tokenize(/a, '\n')[string-length(.) gt 0])!l:firstAndLastDigits(.) )}
       </sum>
+      <!-- not required; just to verify the function processing -->
       <xsl:for-each select="tokenize(/a, '\n')[string-length(.) gt 0]">
         <line>{l:firstAndLastDigits(.)}</line>
       </xsl:for-each>
